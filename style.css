@@ -1,0 +1,56 @@
+/** @format */
+/* Advanced CSS Selectors */
+/* By: Ruben Lopez */
+
+/* list 1 - item 3 & 4 coloured red */
+/* first ul needs to be listed then li */
+ul:nth-of-type(1) li:nth-child(3),
+ul:nth-of-type(1) li:nth-child(4) {
+    color: red;
+}
+
+/* list 2 - item 2 & 4 text size of 24px */
+ol:nth-of-type(1) li:nth-child(2),
+ol:nth-of-type(1) li:nth-child(4) {
+    font-size: 24px;
+}
+
+/* divs - bg red and size 100 x 100 */
+div {
+    background-color: red;
+    height: 100px;
+    width: 100px;
+    margin-bottom: 20px; /* added margin just cause i like the spacing */
+}
+
+/* div - p tags - first tag italicized */
+div p:first-child {
+    font-style: italic;
+}
+
+/* div - second div - normal text white */
+/* selects all of the p tags except first tag */
+/* i feel like there is a better way to write this statment */
+div:nth-of-type(2) > p:not(:first-child) {
+    color: white;
+}
+
+/* cleaning up the button - user friendly */
+button {
+    height: 40px;
+    width: 75px;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+/* hovering over turns button blue */
+button:hover {
+    color: blue;
+}
+
+/* click causes button to expand */
+button:active {
+    border-radius: 0; /* makes the border sharp edges */
+    height: 150px;
+    width: 200px;
+}
